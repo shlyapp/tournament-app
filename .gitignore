@@ -1,0 +1,5 @@
+bin/
+obj/
+TournamentApp.csproj
+TournamentApp.csproj.user
+TournamentApp.sln
