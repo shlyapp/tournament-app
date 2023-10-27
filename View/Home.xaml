@@ -13,6 +13,7 @@
     
     <Grid>
         <Button Style="{StaticResource ButtonStyle}"
-                Content="Загрузить данные из Excel"/>
+                Content="Загрузить данные из Excel"
+                Command="{Binding DownloadDataCommand}"/>
     </Grid>
 </UserControl>
