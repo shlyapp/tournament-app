@@ -12,31 +12,27 @@ namespace TournamentApp.Utitlities
 {
     public static class ExcelReader
     {
-        public static List<User> GetListUsers(string path)
+        public static List<List<object>> ReadDataFromExcel(string filePath)
         {
-            Workbook workbook = new Workbook(path);
+            Workbook workbook = new Workbook(filePath);
             Worksheet worksheet = workbook.Worksheets[0];
 
-            List<User> users = new List<User>();
+            List<List<object>> rowData = new List<List<object>>();
 
-            for (int i = 1; i < worksheet.Cells.MaxDataRow; i++)
+            for (int row = 1; row <= worksheet.Cells.MaxDataRow; row++)
             {
-                User user = new User(
-                    (int)worksheet.Cells[i, 0].Value,
-                    (string)worksheet.Cells[i, 1].Value,
-                    (string)worksheet.Cells[i, 2].Value,
-                    (DateTime)worksheet.Cells[i, 3].Value,
-                    (int)worksheet.Cells[i, 4].Value,
-                    (int)worksheet.Cells[i, 5].Value,
-                    (string)worksheet.Cells[i, 6].Value,
-                    (string)worksheet.Cells[i, 7].Value,
-                    (string)worksheet.Cells[i, 8].Value
-                    );
+                List<object> currentRowData = new List<object>();
 
-                users.Add(user);
+                for (int col = 0; col <= worksheet.Cells.MaxDataColumn; col++)
+                {
+                    Cell cell = worksheet.Cells[row, col];
+                    currentRowData.Add(cell.Value);
+                }
+
+                rowData.Add(currentRowData);
             }
 
-            return users;
+            return rowData;
         }
     }
 }
