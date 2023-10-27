@@ -22,7 +22,8 @@ namespace TournamentApp
         public MainWindow()
         {
             InitializeComponent();
-            ParticipantBuilder.BuildParicipants(ExcelReader.ReadDataFromExcel("example.xlsx"));
+            Participants participants = ParticipantBuilder.BuildParicipants(ExcelReader.ReadDataFromExcel("example.xlsx"));
+            MessageBox.Show(participants.ToString());
         }
     }
 }

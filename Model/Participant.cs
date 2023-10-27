@@ -166,5 +166,18 @@ namespace TournamentApp.Model
                 _coachName = value;
             }
         }
+
+        public override string ToString()
+        {
+            return $"Id: {_id}\n" +
+                $"Name: {_name}\n" +
+                $"Sex: {_sex}\n" +
+                $"Birthday: {_birthday}\n" +
+                $"Weight: {_weight}\n" +
+                $"Age: {_age}\n" +
+                $"Qualification: {_qualification}\n" +
+                $"Discipline: {_discipline}\n" +
+                $"Coach Name: {_coachName}";
+        }
     }
 }

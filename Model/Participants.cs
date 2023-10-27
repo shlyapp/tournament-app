@@ -85,5 +85,16 @@ namespace TournamentApp.Model
 
             throw new ArgumentException("");
         }
+
+        public override string ToString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (Participant participant in _participants)
+            {
+                stringBuilder.Append(participant.ToString() + "\n");
+            }
+
+            return stringBuilder.ToString();
+        }
     }
 }
