@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TournamentApp.Model;
+using TournamentApp.Utitlities;
 
 namespace TournamentApp
 {
@@ -20,6 +22,8 @@ namespace TournamentApp
         public MainWindow()
         {
             InitializeComponent();
+            Participants participants = ParticipantBuilder.BuildParicipants(ExcelReader.ReadDataFromExcel("example.xlsx"));
+            MessageBox.Show(participants.ToString());
         }
     }
 }
