@@ -30,7 +30,7 @@ namespace TournamentApp.ViewModel
             if (openFileDialog.ShowDialog() == true)
             {
                 var rawData = ExcelReader.ReadDataFromExcel(openFileDialog.FileName);
-                ParticipantBuilder.BuildParicipants(rawData);
+                Database.Participants = ParticipantBuilder.BuildParicipants(rawData);
             }
         }
     }
