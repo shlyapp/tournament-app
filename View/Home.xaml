@@ -12,9 +12,29 @@
     </UserControl.DataContext>
 
     <Grid>
-        <Button Style="{StaticResource ButtonStyle}"
-                Content="Загрузить данные из Excel"
-                Command="{Binding DownloadDataCommand}"/>
+        
+        <Border Background="#FFFFFF"
+                BorderThickness="4"
+                BorderBrush="Black"
+                CornerRadius="22"
+                
+                Width="150"
+                Height="150">
+            <Button  Style ="{DynamicResource AddButtonStyle }"
+                     Command="{Binding DownloadDataCommand}"
+                     Margin="-2"
+                     Background="Transparent" 
+                     BorderThickness="0" >
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/Resources/img1.png"/>
+
+                </StackPanel>
+            </Button>
+        </Border>
+        
+                
+                
     </Grid>
 </UserControl>
 
