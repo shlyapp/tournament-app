@@ -25,6 +25,10 @@
         <Setter Property="HorizontalGridLinesBrush" Value="#DDDDDD" />
         <Setter Property="VerticalGridLinesBrush" Value="#DDDDDD" />
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
 
         <Setter Property="RowStyle">
             <Setter.Value>
