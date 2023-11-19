@@ -111,6 +111,9 @@
                     Content="Сетка"
                     Command="{Binding TournamentGridViewCommand}"
                     />
+            <Button Style="{StaticResource SecounderyButtonStyle}"
+                    Content="Калькулятор"
+                    Command="{Binding CalculatorViewModelCommand}"/>
 
         </StackPanel>
 

@@ -14,5 +14,8 @@
     <DataTemplate DataType="{x:Type vm:TournamentGridViewModel}">
         <view:TournamentGrid />
     </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:CalculatorViewModel}">
+        <view:CalculatorView />
+    </DataTemplate>
 
 </ResourceDictionary>
