@@ -102,12 +102,12 @@
                     Command="{Binding HomeViewCommand}"
                     />
 
-            <Button Style="{StaticResource NavigationButtonStyle}"
+            <Button Style="{StaticResource SecounderyButtonStyle}"
                     Content="Таблица"
                     Command="{Binding TableViewCommand}"
                     />
 
-            <Button Style="{StaticResource NavigationButtonStyle}"
+            <Button Style="{StaticResource SecounderyButtonStyle}"
                     Content="Сетка"
                     Command="{Binding TournamentGridViewCommand}"
                     />
