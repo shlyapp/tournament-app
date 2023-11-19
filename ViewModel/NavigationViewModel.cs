@@ -35,33 +35,10 @@ namespace TournamentApp.ViewModel
         public void ShowTable(object obj)
         {
             CurrentView = new TableViewModel();
-
-            //if (Database.Participants.Elements.Count != 0)
-            //{
-
-                
-            //    return;
-            //}
-            //MessageBox.Show("Загрузи таблицу мразь хуле ты смотришь");
         }
         public void ShowTournamentGrid(object obj) => CurrentView = new TournamentGridViewModel();
 
-        private static NavigationViewModel _instance;
-
-        public static NavigationViewModel Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new NavigationViewModel();
-                }
-
-                return _instance;
-            }
-        }
-
-        private NavigationViewModel()
+        public NavigationViewModel()
         {
             HomeViewCommand = new RelayCommand(ShowHome);
             TableViewCommand = new RelayCommand(ShowTable);

@@ -25,9 +25,6 @@ namespace TournamentApp.ViewModel
 
         private void DownloadDataFromExcel(object obj)
         {
-            //NavigationViewModel.Instance.ShowTable(obj);
-            //NavigationViewModel.Instance.ShowTournamentGrid(obj);
-
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
 
