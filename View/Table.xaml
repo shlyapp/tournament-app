@@ -12,7 +12,28 @@
     </UserControl.DataContext>
 
     <Grid>
-        <DataGrid ItemsSource="{Binding Participants}" 
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <TextBox Height="50" Width="300" Margin="20 0" FontSize="20"
+                     Text="{Binding TextForSearch}"
+                     HorizontalContentAlignment="Center"/>
+            <Button Content="Найти" Style="{DynamicResource SecounderyButtonStyle}"
+                    Margin="0"
+                    Command="{Binding SearchCommand}"
+                    Height="50"
+                    Width="100"
+                    />
+        </StackPanel>
+
+        <DataGrid ItemsSource="{Binding Participants}"
+                  Grid.Row="1"
                   AutoGenerateColumns="False"
                   ScrollViewer.CanContentScroll="True" 
       ScrollViewer.VerticalScrollBarVisibility="Visible"
