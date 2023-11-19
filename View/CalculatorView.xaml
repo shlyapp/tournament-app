@@ -24,15 +24,7 @@
                 <DataGridTextColumn Header="ФИО" Binding="{Binding Path=Name}" Width="Auto" />
                 <DataGridTextColumn Header="Регион" Binding="{Binding Path=Region}" Width="Auto" />
                 <DataGridTextColumn Header="Дисциплина" Binding="{Binding Path=Discipline}" Width="Auto"/>
-                <DataGridTextColumn Header="1" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="2" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="3" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="4" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="5" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="6" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="7" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="8" Binding="{Binding Path=Number1}" Width="Auto"/>
-                <DataGridTextColumn Header="Сумма" Binding="{Binding Path=Sum}" Width="Auto"/>
+                
 
             </DataGrid.Columns>
             
