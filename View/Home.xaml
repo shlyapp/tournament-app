@@ -5,13 +5,15 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:vm="clr-namespace:TournamentApp.ViewModel"
              mc:Ignorable="d" 
-             Height="1024" Width="1370">
+             Height="874" Width="1370">
 
     <UserControl.DataContext>
         <vm:HomeViewModel/>
     </UserControl.DataContext>
     
     <Grid>
-            
+        <Button Style="{StaticResource ButtonStyle}"
+                Content="Загрузить данные из Excel"
+                Command="{Binding DownloadDataCommand}"/>
     </Grid>
 </UserControl>

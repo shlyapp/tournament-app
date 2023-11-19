@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TournamentApp.View"
+             xmlns:vm="clr-namespace:TournamentApp.ViewModel"
              mc:Ignorable="d" 
-             Height="1024" Width="1370">
+             Height="874" Width="1370">
+    
+    <UserControl.DataContext>
+        <vm:TableViewModel/>
+    </UserControl.DataContext>
+
     <Grid>
-            
+        <DataGrid ItemsSource="{Binding Participants}">
+            <!--<DataGrid.Columns>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Path=Title}" Width="90" />
+                <DataGridHyperlinkColumn Header="Компания" Binding="{Binding Path=Company}" Width="80" />
+                <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="50" />
+            </DataGrid.Columns>-->
+        </DataGrid>
     </Grid>
 </UserControl>
