@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
+using TournamentApp.ViewModel;
 
 namespace TournamentApp.Model
 {
-    public class Participant
+    public class Participant : ViewModelBase
     {
         private int _id;
         private string _name;
@@ -243,6 +244,15 @@ namespace TournamentApp.Model
             }
         }
 
+        public void ChangeSum()
+        {
+            List<double> scores = new List<double>() { _number1, _number2,  _number3, _number4, _number5, _number6, _number7, _number8 };
+            double min = scores.Min();
+            double max = scores.Max();
+
+            Sum = scores.Sum() - min - max;
+        }
+
         public double Number1
         {
             get
@@ -256,6 +266,8 @@ namespace TournamentApp.Model
                     throw  new ArgumentException("");
                 }
                 _number1 = value;
+
+                ChangeSum();
             }
         }
 
@@ -272,6 +284,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number2 = value;
+
+                ChangeSum();
             }
         }
 
@@ -288,6 +302,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number3 = value;
+
+                ChangeSum();
             }
         }
         public double Number4
@@ -303,6 +319,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number4 = value;
+
+                ChangeSum();
             }
         }
 
@@ -319,6 +337,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number5 = value;
+
+                ChangeSum();
             }
         }
 
@@ -335,6 +355,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number6 = value;
+
+                ChangeSum();
             }
         }
 
@@ -351,6 +373,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number7 = value;
+
+                ChangeSum();
             }
         }
 
@@ -367,6 +391,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _number8 = value;
+
+                ChangeSum();
             }
         }
 
@@ -383,6 +409,8 @@ namespace TournamentApp.Model
                     throw new ArgumentException("");
                 }
                 _sum = value;
+
+                OnPropertyChanged(nameof(Sum));
             }
         }
 
