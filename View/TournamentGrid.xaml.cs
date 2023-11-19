@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 
 namespace TournamentApp.View
 {
+    /// <summary>
+    /// Логика взаимодействия для TournamentGrid.xaml
+    /// </summary>
     public partial class TournamentGrid : UserControl
     {
         public TournamentGrid()

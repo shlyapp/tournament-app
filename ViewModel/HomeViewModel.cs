@@ -1,29 +1,33 @@
-﻿using Microsoft.Win32;
+﻿using Aspose.Cells;
+using Microsoft.Win32;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using TournamentApp.Utilities;
 using TournamentApp.Model;
-using TournamentApp.Utitlities;
+using System.Windows;
 
 namespace TournamentApp.ViewModel
 {
     public class HomeViewModel : PageViewModel
     {
-        public HomeViewModel() 
+        public HomeViewModel()
         {
             Label = "Главная";
 
             DownloadDataCommand = new RelayCommand(DownloadDataFromExcel);
         }
 
-        public ICommand DownloadDataCommand { get; set; } 
+        public ICommand DownloadDataCommand { get; set; }
 
         private void DownloadDataFromExcel(object obj)
         {
+            //NavigationViewModel.Instance.ShowTable(obj);
+            //NavigationViewModel.Instance.ShowTournamentGrid(obj);
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
 
@@ -32,6 +36,8 @@ namespace TournamentApp.ViewModel
                 var rawData = ExcelReader.ReadDataFromExcel(openFileDialog.FileName);
                 Database.Participants = ParticipantBuilder.BuildParicipants(rawData);
             }
+
+
         }
     }
 }

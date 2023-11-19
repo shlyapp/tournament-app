@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TournamentApp.View
 {
     /// <summary>
-    /// Логика взаимодействия для Home.xaml
+    /// Логика взаимодействия для TounamentForm.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class TounamentForm : UserControl
     {
-        public Home()
+        public TounamentForm()
         {
             InitializeComponent();
         }

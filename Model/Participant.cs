@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Printing;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
+using System.Windows;
 
 namespace TournamentApp.Model
 {
@@ -11,20 +13,26 @@ namespace TournamentApp.Model
     {
         private int _id;
         private string _name;
+        private string _region;
+        private string _city;
+        private string _club;
         private string _sex;
-        private DateTime _birthday;
+        private string _birthday;
         private double _weight;
         private int _age;
         private string _qualification;
         private string _discipline;
         private string _coachName;
 
-        public Participant(int id, string name, string sex, DateTime birthday, double weight, int age, string qualification, string discipline, string coachName)
+        public Participant(int id, string name, string region, string city, string club, string sex, DateTime birthday, double weight, int age, string qualification, string discipline, string coachName)
         {
             Id = id;
             Name = name;
+            Region = region;
+            City = city;
+            Club = club;
             Sex = sex;
-            Birthday = birthday;
+            Birthday = birthday.ToString("dd.MM.yyyy");
             Weight = weight;
             Age = age;
             Qualification = qualification;
@@ -38,7 +46,7 @@ namespace TournamentApp.Model
             {
                 return _id;
             }
-            private set
+            set
             {
                 if (value < 0)
                 {
@@ -55,15 +63,70 @@ namespace TournamentApp.Model
             {
                 return _name;
             }
-            private set
+             set
             {
                 string[] parts = value.Split();
                 if (parts.Length != 3)
                 {
-                    throw new ArgumentException("");
+                    MessageBox.Show("ФИО не содержит трех слов");
+                    return;
                 }
 
                 _name = value;
+            }
+        }
+
+        public string Region
+        {
+            get
+            {
+                return _region;
+            }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception();
+                }
+
+                _region = value;
+            } 
+        }
+
+        public string City
+        {
+            get
+            {
+                return _city;
+            }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception();
+                }
+
+                _city = value;
+            }
+        }
+
+        public string Club
+        {
+            get
+            {
+                return _club;
+            }
+
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new Exception();
+                }
+
+                _club = value;
             }
         }
 
@@ -73,7 +136,7 @@ namespace TournamentApp.Model
             {
                 return _sex;
             }
-            private set
+             set
             {
                 value = value.ToLower();
                 if (value != "ж" && value != "м")
@@ -85,17 +148,17 @@ namespace TournamentApp.Model
             }
         }
 
-        public DateTime Birthday
+        public string Birthday
         {
             get
             {
                 return _birthday;
             }
-            private set
-            { 
-                _birthday = value; 
+             set
+            {
+                _birthday = value;
             }
-        } 
+        }
 
         public double Weight
         {
@@ -103,7 +166,7 @@ namespace TournamentApp.Model
             {
                 return _weight;
             }
-            private set
+             set
             {
                 if (value < 0)
                 {
@@ -120,7 +183,7 @@ namespace TournamentApp.Model
             {
                 return _age;
             }
-            private set
+             set
             {
                 if (value < 0)
                 {
@@ -137,7 +200,7 @@ namespace TournamentApp.Model
             {
                 return _qualification;
             }
-            private set
+             set
             {
                 _qualification = value;
             }
@@ -149,9 +212,9 @@ namespace TournamentApp.Model
             {
                 return _discipline;
             }
-            private set
+             set
             {
-                _discipline = value;  
+                _discipline = value;
             }
         }
 
@@ -161,7 +224,7 @@ namespace TournamentApp.Model
             {
                 return _coachName;
             }
-            private set
+             set
             {
                 _coachName = value;
             }

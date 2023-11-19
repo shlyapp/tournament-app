@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 
 namespace TournamentApp.View
 {
+    /// <summary>
+    /// Логика взаимодействия для Table.xaml
+    /// </summary>
     public partial class Table : UserControl
     {
         public Table()

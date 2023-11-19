@@ -13,16 +13,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TournamentApp.Model;
-using TournamentApp.Utitlities;
 
 namespace TournamentApp
 {
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            Participants participants = ParticipantBuilder.BuildParicipants(ExcelReader.ReadDataFromExcel("example.xlsx"));
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var a = Database.Participants;
         }
     }
 }

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
-using TournamentApp.Utitlities;
+using TournamentApp.Model;
+using TournamentApp.Utilities;
 
 namespace TournamentApp.ViewModel
 {
@@ -19,9 +21,9 @@ namespace TournamentApp.ViewModel
                 return _currentView;
             }
             set
-            { 
-                _currentView = value; 
-                OnPropertyChanged();
+            {
+                _currentView = value;
+                OnPropertyChanged("CurrentView");
             }
         }
 
@@ -29,11 +31,37 @@ namespace TournamentApp.ViewModel
         public ICommand TableViewCommand { get; set; }
         public ICommand TournamentGridViewCommand { get; set; }
 
-        private void ShowHome(object obj) => CurrentView = new HomeViewModel();
-        private void ShowTable(object obj) =>  CurrentView = new TableViewModel();
-        private void ShowTournamentGrid(object obj) => CurrentView = new TournamentGridViewModel();
+        public void ShowHome(object obj) => CurrentView = new HomeViewModel();
+        public void ShowTable(object obj)
+        {
+            CurrentView = new TableViewModel();
 
-        public NavigationViewModel()
+            //if (Database.Participants.Elements.Count != 0)
+            //{
+
+                
+            //    return;
+            //}
+            //MessageBox.Show("Загрузи таблицу мразь хуле ты смотришь");
+        }
+        public void ShowTournamentGrid(object obj) => CurrentView = new TournamentGridViewModel();
+
+        private static NavigationViewModel _instance;
+
+        public static NavigationViewModel Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new NavigationViewModel();
+                }
+
+                return _instance;
+            }
+        }
+
+        private NavigationViewModel()
         {
             HomeViewCommand = new RelayCommand(ShowHome);
             TableViewCommand = new RelayCommand(ShowTable);

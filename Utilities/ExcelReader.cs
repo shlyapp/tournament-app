@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TournamentApp.Model;
 
-namespace TournamentApp.Utitlities
+namespace TournamentApp.Utilities
 {
     public static class ExcelReader
     {
