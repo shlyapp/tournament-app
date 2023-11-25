@@ -135,7 +135,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="btnBorder" Property="Background"
-                                        Value="Gray"/>
+                                        Value="DarkGray"/>
                             <Setter TargetName="btnBorder" Property="BorderBrush" 
                                         Value="WhiteSmoke"/>
                             <Setter Property="Foreground" Value="WhiteSmoke"/>
