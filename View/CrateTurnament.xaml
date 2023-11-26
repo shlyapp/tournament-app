@@ -54,6 +54,9 @@
                             Margin="0 7 0 0"
                             Height="38"
                             Background="#FFFFFF">
+                        <TextBox>
+                            
+                        </TextBox>
                         
                     </Border>
                 </StackPanel>
