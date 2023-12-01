@@ -4,70 +4,49 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TournamentApp.View"
+              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:vm="clr-namespace:TournamentApp.ViewModel"
              mc:Ignorable="d" 
              MinHeight="874" MinWidth="1370">
+
+    <UserControl.DataContext>
+        <vm:CrateTurnamentViewModel/>
+    </UserControl.DataContext>
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <Grid Grid.Column="1">
-            <Border Background="LightGray"/>
-            <Border Background="#FFFFFF"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
-                    Margin="0 0 0 75"
-                    BorderThickness="4"
-                    BorderBrush="Black"
-                    CornerRadius="22"
-                    Width="150"
-                    Height="150">
-                <Button Style="{DynamicResource AddButtonStyle}"
-                        Command="{Binding DownloadDataCommand}"
-                        Margin="-2"
-                        Background="Transparent"
-                        BorderThickness="0">
-                    <Image Source="/Resources/img1.png"/>
-
-                </Button>
-            </Border>
-
-            <Grid Width="251">
-                <StackPanel Width="251"
-                            Height="155">
-                    <TextBlock FontSize="20" Text="Вид Спорта"
-                               TextWrapping="Wrap" TextAlignment="Center"/>
-                    <Border Width="251"
-                            Margin="0 7 0 0"
-                            Height="38"
-                            Background="#FFFFFF">
-                        <ComboBox>
-                            <TextBlock>Бокс</TextBlock>
-                            <TextBlock>Каратэ</TextBlock>
-                        </ComboBox>
-                    </Border>
-                    <TextBlock FontSize="20" Text="Количество Участников"
-                               TextWrapping="Wrap" TextAlignment="Center"/>
-                    <Border Width="251"
-                            Margin="0 7 0 0"
-                            Height="38"
-                            Background="#FFFFFF">
-                        <TextBox>
-                            
-                        </TextBox>
-                        
-                    </Border>
-                </StackPanel>
-
+        <Border>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#ff9966" Offset="0"/>
+                    <GradientStop Color="#ffff99" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="1">
                 
-            </Grid>
+                <StackPanel Grid.Column="1"
+                            Orientation="Vertical"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <ComboBox Text="hello"
+                        IsEditable="True"
+                        IsReadOnly="True"
+                       
+     
+                        FontSize="30"> 
+                    </ComboBox>
+                    <TextBox Style="{Binding }"></TextBox>
 
 
-            
-
+                </StackPanel>
+            </Border>
+           
         </Grid>
-
     </Grid>
 </UserControl>
