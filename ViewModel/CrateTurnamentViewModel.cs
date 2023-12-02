@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using TournamentApp.Model;
+using TournamentApp.Utilities;
 
 namespace TournamentApp.ViewModel
 {
@@ -14,7 +18,24 @@ namespace TournamentApp.ViewModel
         public CrateTurnamentViewModel()
         {
             SelectedValue = "Бокс";
+            DownloadDataCommand = new RelayCommand(DownloadDataFromExcel);
         }
+
+        private void DownloadDataFromExcel(object obj)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel (*.xlsx)|*.xlsx";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var rawData = ExcelReader.ReadDataFromExcel(openFileDialog.FileName);
+                Database.Participants = ParticipantBuilder.BuildParicipants(rawData);
+            }
+
+
+        }
+
+        public ICommand DownloadDataCommand { get; set; }
 
         public String RandomValue = "HELLO!!!";
 

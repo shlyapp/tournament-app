@@ -99,7 +99,7 @@
 
             <Button Style="{StaticResource SecounderyButtonStyle}"
                     Content="Главная"
-                    Command="{Binding HomeViewCommand}"
+                    Command="{Binding CrateTurnament}"
                     />
 
             <Button Style="{StaticResource SecounderyButtonStyle}"

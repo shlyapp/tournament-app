@@ -82,7 +82,17 @@
 
     </Style>
     <!--End-->
-    
+
+
+
+    <LinearGradientBrush x:Key="ClickColor" StartPoint="0,0" EndPoint="0,1">
+        <GradientBrush.GradientStops>
+            <GradientStopCollection>
+                <GradientStop Color="#ff9966" Offset="0"/>
+                <GradientStop Color="#ffff99" Offset="1"/>
+            </GradientStopCollection>
+        </GradientBrush.GradientStops>
+    </LinearGradientBrush>
     <!--ADD Button Start:-->
     
     <Style x:Key="AddButtonStyle" TargetType="{x:Type Button}">
@@ -100,7 +110,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="btnBorder" CornerRadius="45"
+                    <Border x:Name="btnBorder" CornerRadius="30"
                                 Background="{TemplateBinding Background}"
                                 Width="{TemplateBinding Width}"
                                 MaxHeight="{TemplateBinding MaxHeight}"
@@ -118,14 +128,14 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="btnBorder" Property="Background"
-                                        Value="LightGray"/>
+                                        Value="{DynamicResource ClickColor}"/>
                             <Setter TargetName="btnBorder" Property="BorderBrush" 
                                         Value="WhiteSmoke"/>
                             <Setter Property="Foreground" Value="WhiteSmoke"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="btnBorder" Property="Background"
-                                        Value="WhiteSmoke"/>
+                                        Value="{DynamicResource ClickColor}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

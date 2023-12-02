@@ -51,6 +51,7 @@ namespace TournamentApp.ViewModel
             TableViewCommand = new RelayCommand(ShowTable);
             TournamentGridViewCommand = new RelayCommand(ShowTournamentGrid);
             CalculatorViewModelCommand = new RelayCommand(ShowCalculator);
+            CrateTurnament = new RelayCommand(ShowCrateTurnament);
             CurrentView = new CrateTurnamentViewModel();
         }
 

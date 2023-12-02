@@ -13,6 +13,8 @@
                 <ResourceDictionary Source="Utilities/DataTemplate.xaml" />
                 <ResourceDictionary Source="Style/Grid.xaml" />
                 <ResourceDictionary Source="Style/TextBlock.xaml" />
+                <ResourceDictionary Source="Style/TextBox.xaml" />
+                <ResourceDictionary Source="Style/ComboBox.xaml" />
 
             </ResourceDictionary.MergedDictionaries>
 

@@ -34,19 +34,42 @@
                             Orientation="Vertical"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
-                    <ComboBox Text="hello"
-                        IsEditable="True"
-                        IsReadOnly="True"
-                       
-     
-                        FontSize="30"> 
-                    </ComboBox>
-                    <TextBox Style="{Binding }"></TextBox>
+                    
+                        <ComboBox HorizontalAlignment="Center"  VerticalAlignment="Center" Width="300" Height="38"
+                         Style="{DynamicResource ComboBox}">
+                            <TextBlock>Tom</TextBlock>
+                        </ComboBox>
 
-
+                        <TextBox Style="{DynamicResource CountParticipant}"
+                             Tag ="Количество участников"/>
+                    
                 </StackPanel>
+                
+                
             </Border>
-           
+            <Border Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0 0 0 150"
+                    Background="Transparent"
+                    BorderThickness="4"
+                    BorderBrush="Black"
+                    CornerRadius="22"
+                    Width="150"
+                    Height="150">
+                
+                <Button Style="{DynamicResource AddButtonStyle}"
+                        Command="{Binding DownloadDataCommand}"
+                        Margin="-2"
+                        Background="Transparent"
+                        BorderThickness="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/img1.png"/>
+                    </StackPanel>
+                    
+                </Button>
+                
+            </Border>
         </Grid>
     </Grid>
 </UserControl>
