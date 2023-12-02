@@ -32,7 +32,7 @@
 
     <SolidColorBrush x:Key="PrimaryDarkTextColor" Color="#0026CA"/>
 
-    <!--SecounderyButtonStyle-->
+    <!--PrimaryButtonStyle-->
     <Style x:Key="SecounderyButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Transparent"/>
         <!--<Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushColor}"/>

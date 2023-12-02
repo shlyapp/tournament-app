@@ -35,8 +35,8 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
                     
-                        <ComboBox HorizontalAlignment="Center"  VerticalAlignment="Center" Width="300" Height="38"
-                         Style="{DynamicResource ComboBox}">
+                        <ComboBox HorizontalAlignment="Center"  VerticalAlignment="Center" Width="300" Height="45"
+                         Style="{DynamicResource ComboBox}" SelectionChanged="ComboBox_SelectionChanged">
                             <TextBlock>Tom</TextBlock>
                         </ComboBox>
 

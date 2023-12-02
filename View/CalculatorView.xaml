@@ -13,6 +13,7 @@
     </UserControl.DataContext> 
     
     <Grid>
+        
         <DataGrid ItemsSource="{Binding Participants}"
                   AutoGenerateColumns="False"
                   ScrollViewer.CanContentScroll="True"
