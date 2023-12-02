@@ -24,5 +24,28 @@ namespace TournamentApp.Control
         {
             InitializeComponent();
         }
+        
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            if(button.Background == Brushes.Green )
+            {
+                button.Background = Brushes.Red;
+            }
+            else if(button.Background == Brushes.Red )
+            {
+                button.Background = Brushes.Green;
+            }
+            else
+            {
+                button.Background = Brushes.Green;
+            }
+
+        }
+
+        
+
+        
+
     }
 }

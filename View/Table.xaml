@@ -42,9 +42,10 @@
                   Grid.Row="1"
                   AutoGenerateColumns="False"
                   ScrollViewer.CanContentScroll="True" 
-      ScrollViewer.VerticalScrollBarVisibility="Visible"
-      ScrollViewer.HorizontalScrollBarVisibility="Visible"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  ScrollViewer.HorizontalScrollBarVisibility="Visible"
                   Margin="20 20 20 50">
+            
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Path=Id}" Width="Auto" />
                 <DataGridTextColumn Header="ФИО" Binding="{Binding Path=Name}" Width="Auto" />

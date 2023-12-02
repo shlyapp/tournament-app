@@ -21,7 +21,7 @@ namespace TournamentApp.View
     /// </summary>
     public partial class TournamentGrid : UserControl
     {
-        private int _participantCouner = 8;
+        private int _participantCouner = 16;
 
         public TournamentGrid()
         {
@@ -43,6 +43,7 @@ namespace TournamentApp.View
                 for (int j = 0; j < lines; j++)
                 {
                     RowDefinition rowDefinition = new RowDefinition();
+                    //rowDefinition.Height = new GridLength(10);
                     subGrid.RowDefinitions.Add(rowDefinition);
 
                     TournamentCell cell = new TournamentCell();
@@ -61,5 +62,9 @@ namespace TournamentApp.View
             }
         }
 
+        private void MainGrid_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

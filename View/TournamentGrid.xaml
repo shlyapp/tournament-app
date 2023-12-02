@@ -7,7 +7,15 @@
              mc:Ignorable="d" 
              MinHeight="874" MinWidth="1370"
              Loaded="Window_Loaded">
-    <Grid x:Name="MainGrid">
-            
-    </Grid>
+    
+    <ScrollViewer VerticalScrollBarVisibility="Visible"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Width="Auto"
+                  
+                  Margin="15">
+        <Grid x:Name="MainGrid" ShowGridLines="True">
+
+
+        </Grid>
+    </ScrollViewer>
 </UserControl>

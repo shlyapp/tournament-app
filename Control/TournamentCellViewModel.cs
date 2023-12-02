@@ -29,4 +29,6 @@ namespace TournamentApp.Control
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
+        
 }
