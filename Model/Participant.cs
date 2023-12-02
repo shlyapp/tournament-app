@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -68,7 +67,6 @@ namespace TournamentApp.Model
                 string[] parts = value.Split();
                 if (parts.Length != 3)
                 {
-                    MessageBox.Show("ФИО не содержит трех слов");
                     return;
                 }
 
