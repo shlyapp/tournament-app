@@ -84,7 +84,7 @@
     <!--End-->
 
 
-
+    <!-- GradColor-->
     <LinearGradientBrush x:Key="ClickColor" StartPoint="0,0" EndPoint="0,1">
         <GradientBrush.GradientStops>
             <GradientStopCollection>
@@ -97,8 +97,6 @@
     
     <Style x:Key="AddButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="Transparent"/>
-        <!--<Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderBrushColor}"/>
-        <Setter Property="Foreground" Value="{DynamicResource PrimaryDarkTextColor}"/>-->
         <Setter Property="Margin" Value="0 14 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>

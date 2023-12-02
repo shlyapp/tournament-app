@@ -5,6 +5,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows;
 using System.Windows.Input;
 using TournamentApp.Model;
 using TournamentApp.Utilities;
@@ -43,7 +45,7 @@ namespace TournamentApp.ViewModel
         {
             get
             {
-                
+
                 return _selectedValue;
             }
             set
@@ -51,7 +53,7 @@ namespace TournamentApp.ViewModel
                 _selectedValue = value;
                 OnPropertyChanged(nameof(SelectedValue));
             }
-            
+
         }
 
         public ObservableCollection<String> Values = new ObservableCollection<String>()
@@ -59,5 +61,6 @@ namespace TournamentApp.ViewModel
             "Бокс",
             "Карате"
         };
-    }
+
+    }   
 }

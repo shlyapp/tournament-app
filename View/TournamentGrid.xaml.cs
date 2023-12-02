@@ -20,9 +20,41 @@ namespace TournamentApp.View
     /// </summary>
     public partial class TournamentGrid : UserControl
     {
+        private int _participantCouner = 8;
+
         public TournamentGrid()
         {
-            InitializeComponent();
+            InitializeComponent();   
+
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            int columns = (int)Math.Log2(_participantCouner) + 1;
+            for (int i = 0; i < columns; i++)
+            {
+                ColumnDefinition columnDefinition = new ColumnDefinition();
+                MainGrid.ColumnDefinitions.Add(columnDefinition);
+
+                int lines = (int)(_participantCouner / (Math.Pow(2, i)));
+                Grid subGrid = new Grid();
+                subGrid.ShowGridLines = true;
+                for (int j = 0; j < lines; j++)
+                {
+                    RowDefinition rowDefinition = new RowDefinition();
+                    subGrid.RowDefinitions.Add(rowDefinition);
+
+                    TextBlock textBlock = new TextBlock();
+                    //textBlock.Style = (Style)FindResource("ParticipantTextBlock");
+                    textBlock.Text = $"{i} - {j}";
+                    Grid.SetColumn(textBlock, 0);
+                    Grid.SetRow(textBlock, j);
+                    subGrid.Children.Add(textBlock);
+                }
+                Grid.SetColumn(subGrid, i);
+                MainGrid.Children.Add(subGrid);
+            }
+        }
+
     }
 }
