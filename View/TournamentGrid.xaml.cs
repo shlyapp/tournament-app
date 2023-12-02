@@ -39,7 +39,7 @@ namespace TournamentApp.View
 
                 int lines = (int)(_participantCouner / (Math.Pow(2, i)));
                 Grid subGrid = new Grid();
-                subGrid.ShowGridLines = true;
+                
                 for (int j = 0; j < lines; j++)
                 {
                     RowDefinition rowDefinition = new RowDefinition();
