@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    x:Class="TournamentApp.Style.Theme.LightTheme">
+
+    <SolidColorBrush x:Key="BackgroundColor">#FFFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="TextForeground">#000000</SolidColorBrush>
+    
+</ResourceDictionary>

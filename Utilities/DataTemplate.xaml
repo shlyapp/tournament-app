@@ -23,4 +23,8 @@
         <view:CrateTurnament />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+        <view:SettingsView />
+    </DataTemplate>
+
 </ResourceDictionary>

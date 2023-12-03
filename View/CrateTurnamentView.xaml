@@ -14,14 +14,7 @@
     </UserControl.DataContext>
 
     <Grid>
-        <Border>
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#ff9966" Offset="0"/>
-                    <GradientStop Color="#ffff99" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
-        </Border>
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

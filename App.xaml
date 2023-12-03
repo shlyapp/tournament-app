@@ -16,6 +16,8 @@
                 <ResourceDictionary Source="Style/TextBox.xaml" />
                 <ResourceDictionary Source="Style/ComboBox.xaml" />
                 <ResourceDictionary Source="Style/TurnamentGrid.xaml" />
+                <ResourceDictionary Source="Style/SVGFiles/Logo.xaml" />
+                
 
             </ResourceDictionary.MergedDictionaries>
 

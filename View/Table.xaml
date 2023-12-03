@@ -40,6 +40,7 @@
 
         <DataGrid ItemsSource="{Binding Participants}"
                   Grid.Row="1"
+                  
                   AutoGenerateColumns="False"
                   ScrollViewer.CanContentScroll="True" 
                   ScrollViewer.VerticalScrollBarVisibility="Visible"
@@ -47,6 +48,7 @@
                   Margin="20 20 20 50">
             
             <DataGrid.Columns>
+                
                 <DataGridTextColumn Header="Номер" Binding="{Binding Path=Id}" Width="Auto" />
                 <DataGridTextColumn Header="ФИО" Binding="{Binding Path=Name}" Width="Auto" />
                 <DataGridTextColumn Header="Регион" Binding="{Binding Path=Region}" Width="Auto" />

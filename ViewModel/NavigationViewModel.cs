@@ -31,6 +31,7 @@ namespace TournamentApp.ViewModel
         public ICommand TableViewCommand { get; set; }
         public ICommand TournamentGridViewCommand { get; set; }
         public ICommand CalculatorViewModelCommand { get; set; }
+        public ICommand SettingsViewModelCommand { get; set; } 
 
         public ICommand CrateTurnament { get; set; }
 
@@ -45,6 +46,8 @@ namespace TournamentApp.ViewModel
 
         public void ShowCrateTurnament(object obj) => CurrentView = new CrateTurnamentViewModel();
 
+        public void ShowSettings(object obj) => CurrentView = new SettingsViewModel();
+
         public NavigationViewModel()
         {
             HomeViewCommand = new RelayCommand(ShowHome);
@@ -53,6 +56,7 @@ namespace TournamentApp.ViewModel
             CalculatorViewModelCommand = new RelayCommand(ShowCalculator);
             CrateTurnament = new RelayCommand(ShowCrateTurnament);
             CurrentView = new CrateTurnamentViewModel();
+            SettingsViewModelCommand = new RelayCommand(ShowSettings);
         }
 
     }
