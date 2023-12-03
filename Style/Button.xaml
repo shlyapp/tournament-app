@@ -146,6 +146,7 @@
 
     <!--Colors-->
     <SolidColorBrush x:Key="NeutralColor" Color="Transparent"/>
+    <SolidColorBrush x:Key="OFFBlueEffect" Color="Transparent"/>
     <SolidColorBrush x:Key="WinnerColor" Color="#30C058"/>
     <SolidColorBrush x:Key="TheLoserColor" Color="#D31010"/>
     
@@ -159,6 +160,40 @@
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="38"/>
         <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="btnBorder" CornerRadius="0"
+                                Background="{TemplateBinding Background}"
+                                Width="{TemplateBinding Width}"
+                                MaxHeight="{TemplateBinding MaxHeight}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="True"
+                                Padding="{TemplateBinding Padding}" Margin="0 0 0 0">
+                        <ContentPresenter x:Name="ContentPresenter" Focusable="False"
+                                             HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                             VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                             Margin="{TemplateBinding Padding}"
+                                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                             RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="btnBorder" Property="Background"
+                                        Value="{DynamicResource OFFBlueEffect}"/>
+                            <Setter TargetName="btnBorder" Property="BorderBrush" 
+                                        Value="{DynamicResource OFFBlueEffect}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource OFFBlueEffect}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="btnBorder" Property="Background"
+                                        Value="{DynamicResource OFFBlueEffect}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
 
 
 

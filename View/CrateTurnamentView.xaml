@@ -37,7 +37,8 @@
                     
                         <ComboBox HorizontalAlignment="Center"  VerticalAlignment="Center" Width="300" Height="45"
                          Style="{DynamicResource ComboBox}" SelectionChanged="ComboBox_SelectionChanged">
-                            <TextBlock>Tom</TextBlock>
+                        <TextBlock>Бокс</TextBlock>
+                        <TextBlock>Каратэ</TextBlock>
                         </ComboBox>
 
                         <TextBox Style="{DynamicResource CountParticipant}"
